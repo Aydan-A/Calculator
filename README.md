@@ -20,5 +20,5 @@ A simple, responsive, and functional calculator built using HTML, CSS, and JavaS
    ```bash
    git clone https://github.com/Aydan-A/Calculator.git
 
-###Contributing   
+## Contributing   
 Contributions are welcome! If you find any bugs or want to suggest improvements, feel free to open an issue or submit a pull request.
