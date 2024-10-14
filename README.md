@@ -18,5 +18,5 @@ A simple, responsive, and functional calculator built using HTML, CSS, and JavaS
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/calculator.git
+   git clone https://github.com/Aydan-A/Calculator.git
    cd calculator
