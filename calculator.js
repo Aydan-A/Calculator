@@ -63,14 +63,6 @@ AllbuttonsContainer.addEventListener("click", function (e) {
   }
 });
 
-function sequence(e) {
-  let el = e.target;
-  let elText = el.innerHTML;
-  if (elText !== "=" && elText !== "del") {
-    sequenceOfOperations.value += elText;
-  }
-}
-
 function clearAll() {
   Resultdisplay.value = "";
   sequenceOfOperations.value = "";
