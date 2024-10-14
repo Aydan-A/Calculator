@@ -22,8 +22,6 @@ function calculate(prev, curr, operator) {
       return prev / curr;
     case "%":
       return prev * (curr / 100);
-    case "√x ":
-      return Math.sqrt(curr);
     default:
       return curr;
   }
@@ -32,11 +30,22 @@ function calculate(prev, curr, operator) {
 AllbuttonsContainer.addEventListener("click", function (e) {
   let el = e.target;
   let elText = el.innerHTML;
+  console.log(elText);
 
   if (isFinite(elText) || elText === ".") {
+    if (equalsPressed) {
+      // Reset if equals was pressed previously
+      currentValue = "";
+      equalsPressed = false;
+    }
     currentValue += elText;
     Resultdisplay.value = currentValue;
-  } else if (elText !== "=" && elText !== "del" && elText !== "C") {
+  } else if (
+    elText !== "=" &&
+    elText !== "del" &&
+    elText !== "C" &&
+    elText !== "√x"
+  ) {
     if (currentValue !== "") {
       operator = elText;
       previousValue = currentValue;
@@ -51,7 +60,10 @@ AllbuttonsContainer.addEventListener("click", function (e) {
         previousValue + " " + operator + " " + currentValue;
       currentValue = result;
       Resultdisplay.value = result;
+      operator = "";
       equalsPressed = true;
+    } else if (operator !== "√x") {
+      Resultdisplay.value = "Something is missed";
     }
   } else if (elText === "del") {
     if (currentValue.length > 0) {
@@ -60,6 +72,21 @@ AllbuttonsContainer.addEventListener("click", function (e) {
     }
   } else if (elText === "C") {
     clearAll();
+  } else if (elText === "√x" || elText === "√") {
+    // operator = elText;
+    if (currentValue.length > 0 || equalsPressed) {
+      let num = parseFloat(currentValue);
+      if (num >= 0) {
+        let root = Math.sqrt(num);
+        sequenceOfOperations.value = `√${currentValue}`;
+        Resultdisplay.value = root;
+        currentValue = root.toString();
+        equalsPressed = false;
+        operator = "";
+      } else {
+        Resultdisplay.value = "invalid";
+      }
+    }
   }
 });
 
