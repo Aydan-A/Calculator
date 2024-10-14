@@ -13,3 +13,10 @@ A simple, responsive, and functional calculator built using HTML, CSS, and JavaS
   
 ![image](https://github.com/user-attachments/assets/94b720a1-cc8c-446d-b540-639dc8411fc0)
 
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/calculator.git
+   cd calculator
