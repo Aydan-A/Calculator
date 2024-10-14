@@ -19,4 +19,3 @@ A simple, responsive, and functional calculator built using HTML, CSS, and JavaS
 
    ```bash
    git clone https://github.com/Aydan-A/Calculator.git
-   cd calculator
