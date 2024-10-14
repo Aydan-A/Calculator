@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 2%;
+}
+
+.calculator-container {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.display {
+    background-color: #222;
+    color: white;
+    text-align: right;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #d42828;
+}
+
+/* Operation buttons with red background */
+.operation-button {
+    background-color: #e74c3c;
+}
+
+.operation-button:hover {
+    background-color: #c0392b;
+}
+
+/* Number buttons with blue background */
+.number-button {
+    background-color: #3498db;
+}
+
+.number-button:hover {
+    background-color: #2980b9;
+}
+
+/* Display input fields */
+.maindisplay,
+.sequenceOfOperations {
+    cursor: default;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
