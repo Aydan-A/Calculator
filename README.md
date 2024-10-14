@@ -11,4 +11,5 @@ A simple, responsive, and functional calculator built using HTML, CSS, and JavaS
 - Responsive design for desktop and mobile devices
 - Works with decimal inputs
   
-  ![image](https://github.com/user-attachments/assets/49d6aea4-7366-46ac-8c0e-42eceb2dd9ff)
+![image](https://github.com/user-attachments/assets/94b720a1-cc8c-446d-b540-639dc8411fc0)
+
